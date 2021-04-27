@@ -1,0 +1,181 @@
+.greeting{
+    text-align: center;
+    color: red;
+}
+.input{
+    display: flex;
+    margin: auto;
+    box-shadow: 1px 1px;
+}
+.container{
+    display: flex;
+}
+.playArea{
+    display: flex;
+    border-radius: 10px;
+    flex-wrap: wrap;
+    justify-content: start;
+    column-gap: 2px;
+    height: auto;
+    width: 500px;
+    border: 1px solid rgba(128, 128, 128, 0.596);
+    margin: auto;
+    padding: 10px 10px 10px 10px;
+    background-color: #efefef;
+    box-shadow: 1px 1px;  
+}
+.info{
+    display: flex;
+    text-align: left;
+    margin: auto;
+    flex-direction:column;
+}
+
+.box1{
+    display: flex;
+    flex: 0 32%;
+    height: 100px;
+    margin-bottom: 2%;
+    order: 0;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(180, 180, 180);
+    text-align: center;
+    border: 1px solid;
+    box-shadow: 1px 1px; 
+    background-size: 100%;
+}
+
+.box2{
+    display: flex;
+    flex: 0 32%;
+    height: 100px;
+    margin-bottom: 2%;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(180, 180, 180);
+    text-align: center;
+    border: 1px solid;
+    box-shadow: 1px 1px; 
+}
+.box3{
+    display: flex;
+    flex: 0 32%;
+    height: 100px;
+    margin-bottom: 2%;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(180, 180, 180);
+    text-align: center;
+    border: 1px solid;
+    box-shadow: 1px 1px; 
+}
+.box4{
+    display: flex;
+    flex: 0 32%;
+    height: 100px;
+    margin-bottom: 2%;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(180, 180, 180);
+    text-align: center;
+    border: 1px solid;
+    box-shadow: 1px 1px; 
+}
+.box5{
+    display: flex;
+    flex: 0 32%;
+    height: 100px;
+    margin-bottom: 2%;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(180, 180, 180);
+    text-align: center;
+    border: 1px solid;
+    box-shadow: 1px 1px; 
+}
+.box6{
+    display: flex;
+    flex: 0 32%;
+    height: 100px;
+    margin-bottom: 2%;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(180, 180, 180);
+    text-align: center;
+    border: 1px solid;
+    box-shadow: 1px 1px; 
+}
+.box7{
+    display: flex;
+    flex: 0 32%;
+    height: 100px;
+    margin-bottom: 2%;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(180, 180, 180);
+    text-align: center;
+    border: 1px solid;
+    box-shadow: 1px 1px; 
+}
+.box8{
+    display: flex;
+    flex: 0 32%;
+    height: 100px;
+    margin-bottom: 2%;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(180, 180, 180);
+    text-align: center;
+    border: 1px solid;
+    box-shadow: 1px 1px; 
+}
+.box9{
+    display: flex;
+    flex: 0 32%;
+    height: 100px;
+    margin-bottom: 2%;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(180, 180, 180);
+    text-align: center;
+    border: 1px solid;
+    box-shadow: 1px 1px; 
+}
+
+.box1:hover{
+    color: red;
+    
+}
+.box2:hover{
+    color: red;
+    
+}
+.box3:hover{
+    color: red;
+    
+}
+.box4:hover{
+    color: red;
+    
+}
+.box5:hover{
+    color: red;
+    
+}
+.box6:hover{
+    color: red;
+    
+}
+.box7:hover{
+    color: red;
+    
+}
+.box8:hover{
+    color: red;
+    
+}
+.box9:hover{
+    color: red;
+    
+}
