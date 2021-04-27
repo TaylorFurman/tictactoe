@@ -38,136 +38,238 @@ function win(){
     window.location.reload();
 }
 
-function changecolor(){
-    console.log("");
-}
-
-
-function wincondition(){
-    if(val1 == 1 && val2 == 1 && val3 == 1){
-        alert("super");
-        window.location.reload();
-    }
-    else if(val4 == 1 && val5 == 1 && val6 == 1){
-        alert("super");
-        window.location.reload();
-    }
-    else if(val7 == 1 && val8 == 1 && val9 == 1){
-        alert("super");
-        window.location.reload();
-    }
-    else if(val1 == 1 && val4 == 1 && val7 == 1){
-        alert("super");
-        window.location.reload();
-    }
-    else if(val2 == 1 && val5 == 1 && val8 == 1){
-        alert("super");
-        window.location.reload();
-    }
-    else if(val3 == 1 && val6 == 1 && val9 == 1){
-        alert("super");
-        window.location.reload();
-    }
-    else if(val1 == 1 && val5 == 1 && val9 == 1){
-        alert("super");
-        window.location.reload();
-    }else if(val3 == 1 && val5 == 1 && val7 == 1){
-        alert("super");
-        window.location.reload();
-    }
-}
 
 
 
 button1.onclick = function(){
-    counter = counter + 1;
-    button1.onclick = false;
     val1 = 1;
+    counter = counter + 1;
+    if (counter%2 !=0){
+        document.querySelector(".box1").textContent = "X";
+        ans1 = "X";
+    }
+        else{
+            document.querySelector(".box1").textContent = "O"; 
+            ans1 = "O";
+        }
+    button1.onclick = false;
     wincondition();
-    changecolor();
-    console.log(counter);
     if(counter == 9){
         endgame();
     }
 }
 
 button2.onclick = function(){
-    counter = counter + 1;
-    button2.onclick = false;
     val2 = 1;
+    counter = counter + 1;
+    if (counter%2 !=0){
+        document.querySelector(".box2").textContent = "X";
+        ans2 = "X";
+    }
+        else{
+            document.querySelector(".box2").textContent = "O"; 
+            ans2 = "O";
+        }
+    button2.onclick = false;
     wincondition();
-    console.log(counter);
     if(counter == 9){
         endgame();
     }
 }
 button3.onclick = function(){
-    counter = counter + 1;
-    button3.onclick = false;
     val3 = 1;
+    counter = counter + 1;
+    if (counter%2 !=0){
+        document.querySelector(".box3").textContent = "X";
+        ans3 = "X";
+    }
+        else{
+            document.querySelector(".box3").textContent = "O"; 
+            ans3 = "O";
+        }
+    button3.onclick = false;
     wincondition();
-    console.log(counter);
     if(counter == 9){
         endgame();
     }
 }
 button4.onclick = function(){
-    counter = counter + 1;
-    button4.onclick = false;
     val4 = 1;
+    counter = counter + 1;
+    if (counter%2 !=0){
+        document.querySelector(".box4").textContent = "X";
+        ans4 = "X";
+    }
+        else{
+            document.querySelector(".box4").textContent = "O";
+            ans4 = "O";
+        }
+    button4.onclick = false;
     wincondition();
-    console.log(counter);
     if(counter == 9){
         endgame();
     }
 }
 button5.onclick = function(){
-    counter = counter + 1;
-    button5.onclick = false;
     val5 = 1;
+    counter = counter + 1;
+    if (counter%2 !=0){
+        document.querySelector(".box5").textContent = "X";
+        ans5 = "X";
+    }
+        else{
+            document.querySelector(".box5").textContent = "O"; 
+            ans5 = "O";
+        }
+    button5.onclick = false;  
     wincondition();
-    console.log(counter);
     if(counter == 9){
         endgame();
     }
 }
 button6.onclick = function(){
-    counter = counter + 1;
-    button6.onclick = false;
     val6 = 1;
+    counter = counter + 1;
+    if (counter%2 !=0){
+        document.querySelector(".box6").textContent = "X";
+        ans6 = "X";
+    }
+        else{
+            document.querySelector(".box6").textContent = "O"; 
+            ans6 = "O";
+        }
+    button6.onclick = false;
     wincondition();
-    console.log(counter);
     if(counter == 9){
         endgame();
     }
 }
 button7.onclick = function(){
-    counter = counter + 1;
-    button7.onclick = false;
     val7 = 1;
-    wincondition();
-    console.log(counter);
+    counter = counter + 1;
+    if (counter%2 !=0){
+        document.querySelector(".box7").textContent = "X";
+        ans7 = "X";
+    }
+        else{
+            document.querySelector(".box7").textContent = "O";
+            ans7 = "O";
+        }
+    button7.onclick = false;
+    wincondition(); 
     if(counter == 9){
         endgame();
     }
 }
 button8.onclick = function(){
-    counter = counter + 1;
-    button8.onclick = false;
     val8 = 1;
+    counter = counter + 1;
+    if (counter%2 !=0){
+        document.querySelector(".box8").textContent = "X";
+        ans8 = "X";
+    
+    }
+        else{
+            document.querySelector(".box8").textContent = "O";
+        ans8 = "O";
+        }
+    button8.onclick = false;
     wincondition();
-    console.log(counter);
     if(counter == 9){
         endgame();
     }
 }
 button9.onclick = function(){
-    counter = counter + 1;
-    button9.onclick = false;
     val9 = 1;
+    counter = counter + 1;
+    if (counter%2 !=0){
+        document.querySelector(".box9").textContent = "X";
+        ans9 = "X";
+    }
+        
+        else{
+            document.querySelector(".box9").textContent = "O";
+            ans9 = "O"; 
+        }
+    button9.onclick = false;
     wincondition();
-    console.log(counter);
     if(counter == 9){
         endgame();
     }
 }
+
+
+function wincondition(){
+        if(ans1 == "X" && ans2 == "X" && ans3 == "X"){
+            alert("1Player X Wins Horizontal!");
+            window.location.reload();
+        }
+        else if(ans1 == "O" && ans2 == "O" && ans3 == "O"){
+            alert("2Player O Wins Horizontal!");
+            window.location.reload();
+        }
+
+        else if(ans4 == "X" && ans5 == "X" && ans6 == "X"){
+            alert("3Player X Wins Horizontal!");
+            window.location.reload();
+        }
+        else if(ans4 == "O" && ans5 == "O" && ans6 == "O"){
+            alert("4Player O Wins Horizontal!");
+            window.location.reload();
+        }
+
+        else if(ans7 == "X" && ans8 == "X" && ans9 == "X"){
+            alert("5Player X Wins Horizontal!");
+            window.location.reload();
+        }
+        else if(ans7 == "O" && ans8 == "O" && ans9 == "O"){
+            alert("6Player O Wins Horizontal!");
+            window.location.reload();
+        }    
+
+        else if(ans1 == "X" && ans4 == "X" && ans7 == "X"){
+            alert("7Player X Wins Vertical");
+            window.location.reload();
+        }
+        else if(ans1 == "O" && ans4 == "O" && ans7 == "O"){
+            alert("8Player O Wins Vertical");
+            window.location.reload();
+        }
+
+        else if(ans2 == "X" && ans5 == "X" && ans8 == "X"){
+            alert("9Player X Wins Vertical");
+            window.location.reload();
+        }
+        else if(ans2 == "O" && ans5 == "O" && ans8 == "O"){
+            alert("10Player O Wins Vertical");
+            window.location.reload();
+        }
+        else if(ans3 == "X" && ans6 == "X" && ans9 == "X"){
+            alert("11Player X Wins Vertical");
+            window.location.reload();
+        }
+        else if(ans3 == "O" && ans6 == "O" && ans9 == "O"){
+            alert("12Player O Wins Vertical");
+            window.location.reload();
+        }
+
+        else if(ans1 == "X" && ans5 == "X" && ans9 == "X" ){
+            alert("13Player X Diagonal Win");
+            window.location.reload();
+        }
+        else if(ans1 == "O" && ans5 == "O" && ans9 == "O"){
+            alert("14Player O Diagonal Win");
+            window.location.reload();
+        }
+        else if(ans3 == "X" && ans5 == "X" && ans7 == "X"){
+            alert("15Player X Diagonal Win");
+            window.location.reload();
+        }
+        else if(ans3 == "O" && ans5 == "O" && ans7 == "O"){
+            alert("16Player O Diagonal Win");
+            window.location.reload();
+        }
+    }
+
+        
+
