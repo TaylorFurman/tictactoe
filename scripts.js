@@ -1,3 +1,4 @@
+//Creates a constant named "buttonX" that is created when '.boxX' is selected on the page
 const button1 = document.querySelector('.box1');
 const button2 = document.querySelector('.box2');
 const button3 = document.querySelector('.box3');
@@ -7,12 +8,14 @@ const button6 = document.querySelector('.box6');
 const button7 = document.querySelector('.box7');
 const button8 = document.querySelector('.box8');
 const button9 = document.querySelector('.box9');
+
+//Creates a constant named "newgame" that is created when the new game button is clicked
 const newgame = document.querySelector('.input');
 
-
-
-
+//creates a "counter" variable that acts as the main counter for the game (counts number of turns);
 var counter = 0;
+
+//Needed in order to create a boolean type of value for the functions below;
 var val1 = 0;
 var val2 = 0;
 var val3 = 0;
@@ -23,6 +26,8 @@ var val7 = 0;
 var val8 = 0;
 var val9 = 0;
 
+
+//Needed in order for the win condition to complete sucessfully;
 var ans1 = "";
 var ans2 = "";
 var ans3 = "";
@@ -33,21 +38,25 @@ var ans7 = "";
 var ans8 = "";
 var ans9 = "";
 
+//Score variables
+var scoreX = 0;
+var scoreO = 0;
+
+
+//Button is clicked and the screen refreshes;
 newgame.onclick = function(){
     alert("New Game Started");
-    window.location.reload();
+    window.location.reload()
 }
 
+//game counter reaches 9, and assumes no-winners were made
 function endgame(){
-    alert("Game Over!");
+    alert("CAT!");
     window.location.reload();
+
 }
 
-function win(){
-    alert("you win");
-    window.location.reload();
-}
-
+//function containing other win condition functions
 function checkwin(){
     horizontalwin1();
     horizontalwin2();
@@ -57,10 +66,19 @@ function checkwin(){
     verticalwin3();
     diagonalwin1();
     diagonalwin2();
-    
+}
+
+//Add score to text box
+function addScoreX(){
+    ans = 0;
+    var addX = parseInt(document.getElementsByClassName("playerXScore").value);
+    ans = addX+1;
+
 }
 
 
+//When button is clicked, it first adds 1 to valX, the in game counter adds 1, if the counter is not even a "X" string is put into the box, if odd a "O" string.  
+//If the counter = 9, the game ends as a "CAT."  It then checks the win condition functions
 button1.onclick = function(){
     val1 = 1;
     counter = counter + 1;
@@ -74,12 +92,12 @@ button1.onclick = function(){
         }
     button1.onclick = false;
     if(counter == 9){
+        
         endgame();
         return;
     }
     checkwin();
 }
-
 button2.onclick = function(){
     val2 = 1;
     counter = counter + 1;
@@ -98,8 +116,6 @@ button2.onclick = function(){
     }
     checkwin();
 }
-
-
 button3.onclick = function(){
     val3 = 1;
     counter = counter + 1;
@@ -136,8 +152,6 @@ button4.onclick = function(){
     }
     checkwin();
 }
-
-
 button5.onclick = function(){
     val5 = 1;
     counter = counter + 1;
@@ -156,8 +170,6 @@ button5.onclick = function(){
     }
     checkwin();
 }
-
-
 button6.onclick = function(){
     val6 = 1;
     counter = counter + 1;
@@ -176,7 +188,6 @@ button6.onclick = function(){
     }
     checkwin();
 }
-
 button7.onclick = function(){
     val7 = 1;
     counter = counter + 1;
@@ -214,7 +225,6 @@ button8.onclick = function(){
     }
     checkwin();
 }
-
 button9.onclick = function(){
     val9 = 1;
     counter = counter + 1;
@@ -234,11 +244,11 @@ button9.onclick = function(){
     checkwin();
 }
 
-
+//various win conditions that check the string inside of the box.  It determines if the string is all "X"'s or all "O".  After the win condition it reloads the page.
 function horizontalwin1(){
     if(ans1 == "X" && ans2 == "X" && ans3 == "X"){
         alert("1Player X Wins Horizontal!");
-        window.location.reload();
+        window.location.reload()
     }
     else if(ans1 == "O" && ans2 == "O" && ans3 == "O"){
     alert("2Player O Wins Horizontal!");
@@ -266,8 +276,6 @@ function horizontalwin3(){
     window.location.reload();
     }   
 }    
-     
-
 function verticalwin1(){
         if(ans1 == "X" && ans4 == "X" && ans7 == "X"){
         alert("7Player X Wins Vertical");
@@ -278,7 +286,6 @@ function verticalwin1(){
         window.location.reload();
         }
     }
-
 function verticalwin2(){
     if(ans2 == "X" && ans5 == "X" && ans8 == "X"){
         alert("9Player X Wins Vertical");
@@ -289,7 +296,6 @@ function verticalwin2(){
         window.location.reload();
         }
 }
-
 function verticalwin3(){
     if(ans3 == "X" && ans6 == "X" && ans9 == "X"){
         alert("11Player X Wins Vertical");
@@ -301,7 +307,6 @@ function verticalwin3(){
         }
 
 }           
-
 function diagonalwin1(){
     if(ans1 == "X" && ans5 == "X" && ans9 == "X" ){
         alert("13Player X Diagonal Win");
