@@ -326,9 +326,5 @@ function diagonalwin2(){
         alert("16Player O Diagonal Win");
         window.location.reload();
         }
-<<<<<<< HEAD
-}        
-=======
 }        
 
->>>>>>> 2c9d32d400a0caed6fd4383536e870a0c7f8394b
