@@ -193,3 +193,8 @@ img{
     color: red;
     
 }
+
+#playerTurn{
+    border: solid black;
+
+}

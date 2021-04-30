@@ -39,8 +39,49 @@ var ans8 = "";
 var ans9 = "";
 
 //Score variables
-var scoreX = 0;
-var scoreO = 0;
+let playerXScore = document.getElementById("scoreX")
+let playerOScore = document.getElementById("scoreO")
+
+
+//Checking the local browser storage to see if "ScoreX/O" exists.  If not it is created and set to 0.
+if(localStorage.getItem("scoreX")){
+    playerXScore.innerHTML = localStorage.getItem("scoreX");
+    scoreX = localStorage.getItem("scoreX");
+
+}
+else{
+    playerXScore.innerHTML = 0;
+    scoreX = 0;
+}
+
+if(localStorage.getItem("scoreO")){
+    playerOScore.innerHTML = localStorage.getItem("scoreO");
+    scoreO = localStorage.getItem("scoreO");
+
+}
+else{
+    playerOScore.innerHTML = 0;
+    scoreO = 0;
+}
+
+
+
+//Add score to number box
+
+function addScore(){
+    if (counter%2 !=0){
+        scoreX = parseInt(scoreX) + 1;
+        localStorage.setItem("scoreX", scoreX);
+        alert("Player X's Score is " + scoreX);
+    }
+    else{
+        scoreO = parseInt(scoreO) + 1;
+        localStorage.setItem("scoreO", scoreO);
+        alert("Player X's Score is " + scoreO);
+    }
+
+}
+
 
 
 //Button is clicked and the screen refreshes;
@@ -68,13 +109,8 @@ function checkwin(){
     diagonalwin2();
 }
 
-//Add score to text box
-function addScoreX(){
-    ans = 0;
-    var addX = parseInt(document.getElementsByClassName("playerXScore").value);
-    ans = addX+1;
 
-}
+
 
 
 //When button is clicked, it first adds 1 to valX, the in game counter adds 1, if the counter is not even a "X" string is put into the box, if odd a "O" string.  
@@ -248,20 +284,24 @@ button9.onclick = function(){
 function horizontalwin1(){
     if(ans1 == "X" && ans2 == "X" && ans3 == "X"){
         alert("1Player X Wins Horizontal!");
-        window.location.reload()
+        addScore();
+        window.location.reload();
     }
     else if(ans1 == "O" && ans2 == "O" && ans3 == "O"){
     alert("2Player O Wins Horizontal!");
+    addScore();
     window.location.reload();
     }
 }
 function horizontalwin2(){
     if(ans4 == "X" && ans5 == "X" && ans6 == "X"){
         alert("3Player X Wins Horizontal!");
+        addScore();
         window.location.reload();
         }
     else if(ans4 == "O" && ans5 == "O" && ans6 == "O"){
     alert("4Player O Wins Horizontal!");
+    addScore();
     window.location.reload();
     }
 
@@ -269,40 +309,48 @@ function horizontalwin2(){
 function horizontalwin3(){
     if(ans7 == "X" && ans8 == "X" && ans9 == "X"){
         alert("5Player X Wins Horizontal!");
+        addScore();
         window.location.reload();
     }
     else if(ans7 == "O" && ans8 == "O" && ans9 == "O"){
     alert("6Player O Wins Horizontal!");
+    addScore();
     window.location.reload();
     }   
 }    
 function verticalwin1(){
         if(ans1 == "X" && ans4 == "X" && ans7 == "X"){
         alert("7Player X Wins Vertical");
+        addScore();
         window.location.reload();
         }
         else if(ans1 == "O" && ans4 == "O" && ans7 == "O"){
         alert("8Player O Wins Vertical");
+        addScore();
         window.location.reload();
         }
     }
 function verticalwin2(){
     if(ans2 == "X" && ans5 == "X" && ans8 == "X"){
         alert("9Player X Wins Vertical");
+        addScore();
         window.location.reload();
         }
         else if(ans2 == "O" && ans5 == "O" && ans8 == "O"){
         alert("10Player O Wins Vertical");
+        addScore();
         window.location.reload();
         }
 }
 function verticalwin3(){
     if(ans3 == "X" && ans6 == "X" && ans9 == "X"){
         alert("11Player X Wins Vertical");
+        addScore();
         window.location.reload();
         }
         else if(ans3 == "O" && ans6 == "O" && ans9 == "O"){
         alert("12Player O Wins Vertical");
+        addScore();
         window.location.reload();
         }
 
@@ -310,20 +358,24 @@ function verticalwin3(){
 function diagonalwin1(){
     if(ans1 == "X" && ans5 == "X" && ans9 == "X" ){
         alert("13Player X Diagonal Win");
+        addScore();
         window.location.reload();
         }
         else if(ans1 == "O" && ans5 == "O" && ans9 == "O"){
         alert("14Player O Diagonal Win");
+        addScore();
         window.location.reload();
         }
     }
 function diagonalwin2(){
     if(ans3 == "X" && ans5 == "X" && ans7 == "X"){
         alert("15Player X Diagonal Win");
+        addScore();
         window.location.reload();
         }
         else if(ans3 == "O" && ans5 == "O" && ans7 == "O"){
         alert("16Player O Diagonal Win");
+        addScore();
         window.location.reload();
         }
 }        
