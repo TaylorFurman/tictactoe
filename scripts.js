@@ -10,7 +10,7 @@ const button8 = document.querySelector('.box8');
 const button9 = document.querySelector('.box9');
 
 //Creates a constant named "newgame" that is created when the new game button is clicked
-const newgame = document.querySelector('.input');
+const newgame = document.querySelector('.newgame');
 
 //creates a "counter" variable that acts as the main counter for the game (counts number of turns);
 var counter = 0;
@@ -41,6 +41,7 @@ var ans9 = "";
 //Score variables
 let playerXScore = document.getElementById("scoreX")
 let playerOScore = document.getElementById("scoreO")
+let playerTurn = document.getElementById("playerTurn")
 
 
 //Checking the local browser storage to see if "ScoreX/O" exists.  If not it is created and set to 0.
@@ -64,6 +65,10 @@ else{
     scoreO = 0;
 }
 
+playerTurn.innerHTML = "Player X's Turn!"
+
+
+
 
 
 //Add score to number box
@@ -86,8 +91,9 @@ function addScore(){
 
 //Button is clicked and the screen refreshes;
 newgame.onclick = function(){
-    alert("New Game Started");
-    window.location.reload()
+    alert("New game started");
+    localStorage.clear();
+    window.location.reload();
 }
 
 //game counter reaches 9, and assumes no-winners were made
@@ -109,6 +115,17 @@ function checkwin(){
     diagonalwin2();
 }
 
+function playerTurnCheck(){
+    if(counter%2 ==0){
+        document.getElementById("playerTurn").style.color = "blue";
+        playerTurn.innerHTML = "Player X's Turn!";
+    }
+    else if(counter%2 !=0){
+        document.getElementById("playerTurn").style.color = "green";
+        playerTurn.innerHTML = "Player O's Turn!";
+    }
+}
+
 
 
 
@@ -118,6 +135,7 @@ function checkwin(){
 button1.onclick = function(){
     val1 = 1;
     counter = counter + 1;
+    playerTurnCheck()
     if (counter%2 !=0){
         document.querySelector(".box1").textContent = "X";
         ans1 = "X";
@@ -137,6 +155,7 @@ button1.onclick = function(){
 button2.onclick = function(){
     val2 = 1;
     counter = counter + 1;
+    playerTurnCheck()
     if (counter%2 !=0){
         document.querySelector(".box2").textContent = "X";
         ans2 = "X";
@@ -155,6 +174,7 @@ button2.onclick = function(){
 button3.onclick = function(){
     val3 = 1;
     counter = counter + 1;
+    playerTurnCheck()
     if (counter%2 !=0){
         document.querySelector(".box3").textContent = "X";
         ans3 = "X";
@@ -173,6 +193,7 @@ button3.onclick = function(){
 button4.onclick = function(){
     val4 = 1;
     counter = counter + 1;
+    playerTurnCheck()
     if (counter%2 !=0){
         document.querySelector(".box4").textContent = "X";
         ans4 = "X";
@@ -191,6 +212,7 @@ button4.onclick = function(){
 button5.onclick = function(){
     val5 = 1;
     counter = counter + 1;
+    playerTurnCheck()
     if (counter%2 !=0){
         document.querySelector(".box5").textContent = "X";
         ans5 = "X";
@@ -209,6 +231,7 @@ button5.onclick = function(){
 button6.onclick = function(){
     val6 = 1;
     counter = counter + 1;
+    playerTurnCheck()
     if (counter%2 !=0){
         document.querySelector(".box6").textContent = "X";
         ans6 = "X";
@@ -227,6 +250,7 @@ button6.onclick = function(){
 button7.onclick = function(){
     val7 = 1;
     counter = counter + 1;
+    playerTurnCheck()
     if (counter%2 !=0){
         document.querySelector(".box7").textContent = "X";
         ans7 = "X";
@@ -245,6 +269,7 @@ button7.onclick = function(){
 button8.onclick = function(){
     val8 = 1;
     counter = counter + 1;
+    playerTurnCheck()
     if (counter%2 !=0){
         document.querySelector(".box8").textContent = "X";
         ans8 = "X";
@@ -264,6 +289,7 @@ button8.onclick = function(){
 button9.onclick = function(){
     val9 = 1;
     counter = counter + 1;
+    playerTurnCheck()
     if (counter%2 !=0){
         document.querySelector(".box9").textContent = "X";
         ans9 = "X";
