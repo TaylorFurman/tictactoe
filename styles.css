@@ -217,6 +217,18 @@ img{
 }
 
 @media screen and (max-width: 600px){
+    .container{
+        width: 100%;
+    }
+    .playArea{
+        width: 50%;
+        height: 50%;
+    }
+    .newgame{
+        width: 50%;
+    }
+}
+@media screen and (max-width: 200px){
     .playArea{
         width: 50%;
         height: 50%;
