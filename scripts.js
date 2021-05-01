@@ -43,6 +43,11 @@ let playerXScore = document.getElementById("scoreX")
 let playerOScore = document.getElementById("scoreO")
 let playerTurn = document.getElementById("playerTurn")
 
+//Set audio
+var audio = new Audio('./Tada-sound.mp3')
+var catAudio = new Audio('./Metal-Gear-Alert-Sound-Effect.mp3')
+
+
 
 //Checking the local browser storage to see if "ScoreX/O" exists.  If not it is created and set to 0.
 if(localStorage.getItem("scoreX")){
@@ -65,6 +70,8 @@ else{
     scoreO = 0;
 }
 
+
+//Start of game will always be player X's turn
 playerTurn.innerHTML = "Player X's Turn!"
 
 
@@ -72,7 +79,6 @@ playerTurn.innerHTML = "Player X's Turn!"
 
 
 //Add score to number box
-
 function addScore(){
     if (counter%2 !=0){
         scoreX = parseInt(scoreX) + 1;
@@ -84,7 +90,6 @@ function addScore(){
         localStorage.setItem("scoreO", scoreO);
         alert("Player X's Score is " + scoreO);
     }
-
 }
 
 
@@ -98,9 +103,9 @@ newgame.onclick = function(){
 
 //game counter reaches 9, and assumes no-winners were made
 function endgame(){
+    catAudio.play()
     alert("CAT!");
     window.location.reload();
-
 }
 
 //function containing other win condition functions
@@ -125,10 +130,6 @@ function playerTurnCheck(){
         playerTurn.innerHTML = "Player O's Turn!";
     }
 }
-
-
-
-
 
 //When button is clicked, it first adds 1 to valX, the in game counter adds 1, if the counter is not even a "X" string is put into the box, if odd a "O" string.  
 //If the counter = 9, the game ends as a "CAT."  It then checks the win condition functions
@@ -309,72 +310,84 @@ button9.onclick = function(){
 //various win conditions that check the string inside of the box.  It determines if the string is all "X"'s or all "O".  After the win condition it reloads the page.
 function horizontalwin1(){
     if(ans1 == "X" && ans2 == "X" && ans3 == "X"){
+        audio.play();
         alert("1Player X Wins Horizontal!");
         addScore();
         window.location.reload();
     }
     else if(ans1 == "O" && ans2 == "O" && ans3 == "O"){
-    alert("2Player O Wins Horizontal!");
-    addScore();
-    window.location.reload();
+        audio.play();
+        alert("2Player O Wins Horizontal!");
+        addScore();
+        window.location.reload();
     }
 }
 function horizontalwin2(){
     if(ans4 == "X" && ans5 == "X" && ans6 == "X"){
+        audio.play();
         alert("3Player X Wins Horizontal!");
         addScore();
         window.location.reload();
         }
     else if(ans4 == "O" && ans5 == "O" && ans6 == "O"){
-    alert("4Player O Wins Horizontal!");
-    addScore();
-    window.location.reload();
+        audio.play();
+        alert("4Player O Wins Horizontal!");
+        addScore();
+        window.location.reload();
     }
 
 }
 function horizontalwin3(){
     if(ans7 == "X" && ans8 == "X" && ans9 == "X"){
+        audio.play();
         alert("5Player X Wins Horizontal!");
         addScore();
         window.location.reload();
     }
     else if(ans7 == "O" && ans8 == "O" && ans9 == "O"){
-    alert("6Player O Wins Horizontal!");
-    addScore();
-    window.location.reload();
+        audio.play();
+        alert("6Player O Wins Horizontal!");
+        addScore();
+        window.location.reload();
     }   
 }    
 function verticalwin1(){
         if(ans1 == "X" && ans4 == "X" && ans7 == "X"){
+        audio.play();
         alert("7Player X Wins Vertical");
         addScore();
         window.location.reload();
         }
         else if(ans1 == "O" && ans4 == "O" && ans7 == "O"){
+        audio.play();
         alert("8Player O Wins Vertical");
         addScore();
         window.location.reload();
         }
     }
 function verticalwin2(){
-    if(ans2 == "X" && ans5 == "X" && ans8 == "X"){
+        if(ans2 == "X" && ans5 == "X" && ans8 == "X"){
+        audio.play();
         alert("9Player X Wins Vertical");
         addScore();
         window.location.reload();
         }
         else if(ans2 == "O" && ans5 == "O" && ans8 == "O"){
+        audio.play();
         alert("10Player O Wins Vertical");
         addScore();
         window.location.reload();
         }
 }
 function verticalwin3(){
-    if(ans3 == "X" && ans6 == "X" && ans9 == "X"){
+        if(ans3 == "X" && ans6 == "X" && ans9 == "X"){
+        audio.play();
         alert("11Player X Wins Vertical");
         addScore();
         window.location.reload();
         }
         else if(ans3 == "O" && ans6 == "O" && ans9 == "O"){
+        audio.play();
         alert("12Player O Wins Vertical");
         addScore();
         window.location.reload();
@@ -383,26 +396,30 @@ function verticalwin3(){
 }           
 function diagonalwin1(){
     if(ans1 == "X" && ans5 == "X" && ans9 == "X" ){
+        audio.play();
         alert("13Player X Diagonal Win");
         addScore();
         window.location.reload();
         }
         else if(ans1 == "O" && ans5 == "O" && ans9 == "O"){
-        alert("14Player O Diagonal Win");
-        addScore();
-        window.location.reload();
+            audio.play();
+            alert("14Player O Diagonal Win");
+            addScore();
+            window.location.reload();
         }
     }
 function diagonalwin2(){
     if(ans3 == "X" && ans5 == "X" && ans7 == "X"){
+        audio.play();
         alert("15Player X Diagonal Win");
         addScore();
         window.location.reload();
         }
         else if(ans3 == "O" && ans5 == "O" && ans7 == "O"){
-        alert("16Player O Diagonal Win");
-        addScore();
-        window.location.reload();
+            audio.play();
+            alert("16Player O Diagonal Win");
+            addScore();
+            window.location.reload();
         }
 }        
 

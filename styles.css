@@ -1,3 +1,7 @@
+body{
+    background-color: rgb(243, 185, 185);
+}
+
 .greeting{
     text-align: center;
     color: red;
@@ -18,9 +22,9 @@
 
 .playerTurn{
     display: flex;
-    margin: auto;
     font-size: 20px;
     color: blue;
+    font-size: 50px;
 }
 
 .container{
@@ -67,6 +71,7 @@ img{
     border: 1px solid;
     box-shadow: 1px 1px; 
     background-size: 100%;
+    
 }
 
 .box2{
