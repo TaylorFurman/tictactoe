@@ -233,12 +233,65 @@ img{
         width: 50%;
     }
 }
-@media screen and (max-width: 200px){
+@media screen and (max-width: 400px){
     .playArea{
         width: 50%;
         height: 50%;
     }
     .newgame{
         width: 50%;
+    }
+    .box1{
+        font-size: 30px;
+        height: 70px;
+        width: 75px;
+    }
+    .box2{
+        font-size: 30px;
+        height: 70px;
+        width: 75px;
+    }
+    .box3{
+        font-size: 30px;
+        height: 70px;
+        width: 75px;
+    }
+    .box4{
+        font-size: 30px;
+        height: 70px;
+        width: 75px;
+    }
+    .box5{
+        font-size: 30px;
+        height: 70px;
+        width: 75px;
+    }
+    .box6{
+        font-size: 30px;
+        height: 70px;
+        width: 75px;
+    }
+    .box7{
+        font-size: 30px;
+        height: 70px;
+        width: 75px;
+    }
+    .box8{
+        font-size: 30px;
+        height: 70px;
+        width: 75px;
+    }
+    .box9{
+        font-size: 30px;
+        height: 70px;
+        width: 75px;
+    }
+    .info{
+        font-size: 10px;
+        text-align: center;
+        border: dotted 3px;
+    }
+    .newgame{
+        font-size: 20px;
     }
 }
