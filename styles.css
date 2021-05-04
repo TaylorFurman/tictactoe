@@ -362,6 +362,11 @@ img{
         padding-top: 20px;
     }
     .giphy-embed1{
-        width: 100px
+        height: 75px;
+        width: 75px
+    }
+    .giphy-embed2{
+        height: 75px;
+        width: 75px
     }
 }
